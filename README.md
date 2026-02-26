@@ -93,12 +93,16 @@ All 8 possible attribute combinations are supported during sampling.
 
 ```
 📦 celeba-conditional-diffusion  
-├── architecture.py        # Conditional U-Net with Attention + FiLM  
-├── training_lite.py        # DDPM scheduler + training loop + EMA  
-├── inference.py           # Conditional sampling script  
+├── 📁 scripts  
+│   ├── architecture.py      # Conditional UNet (FiLM + Attention)  
+│   ├── training_lite.py     # DDPM scheduler + training loop + EMA  
+│   └── inference.py         # Conditional sampling script  
 │  
-├── weights/            # Saved model weights  
+├── 📁 weights  
+│   └── latest.pt            # Latest trained checkpoint  
 │  
+├── .gitattributes  
+├── LICENSE  
 └── README.md
 ```
 
