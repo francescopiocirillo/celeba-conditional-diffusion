@@ -39,11 +39,15 @@ The generative backbone is a **Conditional U-Net** trained to predict noise ε�
 
 Forward Process:
 
-Codex₀ → xₜ (progressive noise injection)
+```
+x₀ → xₜ (progressive noise injection)
+```
 
 Reverse Process (learned):
 
-Codexₜ → xₜ₋₁ → ... → x₀
+```
+xₜ → xₜ₋₁ → ... → x₀
+```
 
 The model predicts noise at each timestep and reconstructs the clean image via iterative denoising.
 
@@ -71,11 +75,15 @@ The U-Net includes:
 
 Each sample is conditioned on a 3-dimensional binary vector:
 
-Code[Male, Smiling, Young]
+```
+[Male, Smiling, Young]
+```
 
 Example:
 
-Code[1, 1, 0] → Male, Smiling, Not Young
+```
+[1, 1, 0] → Male, Smiling, Not Young
+```
 
 All 8 possible attribute combinations are supported during sampling.
 
@@ -83,7 +91,8 @@ All 8 possible attribute combinations are supported during sampling.
 
 ## 📂 Repository Structure
 
-Code📦 celeba-conditional-diffusion  
+```
+📦 celeba-conditional-diffusion  
 ├── architecture.py        # Conditional U-Net with Attention + FiLM  
 ├── training_lite.py        # DDPM scheduler + training loop + EMA  
 ├── inference.py           # Conditional sampling script  
@@ -91,6 +100,7 @@ Code📦 celeba-conditional-diffusion
 ├── weights/            # Saved model weights  
 │  
 └── README.md
+```
 
 ---
 
